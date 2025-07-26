@@ -157,16 +157,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
- document.onkeydown = function(e) {
-    // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+J
-    if (
-      e.keyCode === 123 || // F12
-      (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
-      (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
-      (e.ctrlKey && e.keyCode === 85) // Ctrl+U
-    ) {
-      alert('Inspect and view source are disabled.');
-      return false;
-    }
-  };
