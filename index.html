@@ -678,6 +678,48 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+  // Disable right click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('Right click is disabled on this page.');
+  });
+
+  // Show alert on form submit
+  document.querySelectorAll('form[data-form]').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting me!');
+      form.reset();
+    });
+  });
+    document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('Right click is disabled on this page.');
+  });
+
+  // Disable Inspect Keys
+  document.onkeydown = function(e) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+      (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
+      (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+    ) {
+      alert('Inspect and view source are disabled.');
+      return false;
+    }
+  };
+
+  // Alert on Contact Form Submit
+  document.querySelectorAll('form[data-form]').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting me!');
+      form.reset();
+    });
+  });
+</script>
 
 </body>
 
