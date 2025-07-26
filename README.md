@@ -6,7 +6,7 @@ Welcome to the source code for my **personal portfolio website** — a space to 
 
 ## 🌐 Live Demo
 
-🔗 **[View Live Website](https://your-portfolio-link.com)**
+🔗 **[View Live Website](https://ptportfolio1.netlify.app/)**
 
 ---
 
